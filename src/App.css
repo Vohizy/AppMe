@@ -1,5 +1,21 @@
+@font-face {
+  font-family: 'Island';
+  src: url('./font/IslandMoments-Regular.ttf');
+  font-family: 'Dancing';
+  src: url('./font/DancingScript-VariableFont_wght.ttf');
+}
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --my-shadow: rgba(128, 128, 128, 0.658);
+  background-image: url('./img/Annie.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
 }
 
 .App-logo {
@@ -28,6 +44,175 @@
   color: #61dafb;
 }
 
+.clock{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-cadre{
+  height: 400px;
+  width: 600px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-body{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 2px 0px 10px var(--my-shadow);
+  color: rgba(0, 0, 0, 0.637);
+}
+
+.clock-center{
+  background: rgb(177, 164, 164);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 47%;
+  left: 47.75%;
+  position: absolute;
+  z-index: 50;
+}
+
+.clock-second{
+  background: yellow;
+  height: 70px;
+  width: 3px;
+  position: absolute;
+  border-radius: 50% 50% 0 0;
+  bottom: 50%;
+  left: 49.5%;
+  z-index: 49;
+  box-shadow: 0.5px 0px 5px var(--my-shadow);
+  transform-origin: bottom;
+  /* display: none; */
+}
+
+.clock-minute{
+  background: rgba(255, 0, 0, 0.884);
+  height: 50px;
+  width: 4px;
+  position: absolute;
+  bottom: 50%;
+  left: 49.3%;
+  z-index: 48;
+  box-shadow: 0.5px 0px 5px var(--my-shadow);
+  transform-origin: bottom;
+  border-radius: 50% 50% 0 0;
+  /* display: none; */
+}
+
+.clock-hour{
+  background: blue;
+  height: 35px;
+  width: 5px;
+  position: absolute;
+  bottom: 50%;
+  left: 49%;
+  z-index: 47;
+  transform-origin: bottom;
+  box-shadow: 1px 0px 5px var(--my-shadow);
+  border-radius: 50% 50% 0 0;
+  /* display: none; */
+}
+
+h2.twelve{
+  position: absolute;
+  top: 1%;
+  left: 44%;
+  margin: 0;
+}
+
+h2.nine{
+  position: absolute;
+  top: 44%;
+  left: 3%;
+  margin: 0;
+}
+
+h2.three{
+  position: absolute;
+  top: 44%;
+  right: 3%;
+  margin: 0;
+}
+
+h2.two{
+  position: absolute;
+  top: 23%;
+  right: 10%;
+  margin: 0;
+}
+
+h2.one{
+  position: absolute;
+  top: 7%;
+  right: 25%;
+  margin: 0;
+}
+
+h2.four{
+  position: absolute;
+  bottom: 23%;
+  right: 10%;
+  margin: 0;
+}
+
+h2.five{
+  position: absolute;
+  bottom: 7%;
+  right: 25%;
+  margin: 0;
+}
+
+h2.six{
+  position: absolute;
+  bottom: 1%;
+  left: 47.5%;
+  margin: 0;
+}
+
+h2.ten{
+  position: absolute;
+  top: 23%;
+  left: 10%;
+  margin: 0;
+}
+
+h2.eleven{
+  position: absolute;
+  top: 7%;
+  left: 25%;
+  margin: 0;
+}
+
+h2.eight{
+  position: absolute;
+  bottom: 23%;
+  left: 10%;
+  margin: 0;
+}
+
+h2.seven{
+  position: absolute;
+  bottom: 7%;
+  left: 25%;
+  margin: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +220,192 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*it's the css of the An'Jaika*/
+/* navbar-css */
+.nav-container{
+  background-color: #61dafb;
+  opacity: 0.8;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+}
+.liste-menu{
+  list-style-type: none;
+  border: #282c34 solid 2px;
+  margin: 0px;
+  padding-left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.list-item{
+  float: left;
+}
+.list-item a{
+     display: block;
+     text-decoration: none;
+     color: black;
+     text-align: center;
+     padding: 15px 17px;
+}
+.list-item a:hover{
+  background-color: #89b5c2;
+}
+.logo{
+  font-family: 'Island';
+  font-size: 45px;
+  font-weight: bolder;
+  float: left;
+  width: 15vw;
+  border: #282c34 solid 2px; 
+  padding-top: 15px;
+  text-align: center;
+
+}
+
+/* Nav css */
+
+.nav{
+  width: 100vw;
+  height: 65vh;
+  border: #282c34 solid 2px;
+}
+.img-container{
+  width: inherit;
+  height: inherit;
+  background-image: linear-gradient(to right, rgba(0, 140, 255, 0.699), rgba(3, 37, 70, 0.438));
+  background-image: url('./img/angelina-yan-sYLP-Hitwkk-unsplash.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img-container::after{
+  content: "";
+  width: inherit;
+  height: inherit;
+  display: flex;
+  background-color: rgba(7, 7, 7, 0.445);
+  opacity: 0.9;
+}
+
+/* Card-css */
+.card-container{
+  width: 24vw;
+  height: 255px;
+  background-color: black;
+  opacity: 0.4;
+  margin: 14px 10px;
+  border-radius: 5%;
+}
+.body-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.card-img{
+  background-image: url('./img/e511a33ca2af943517f145e25cd4785e.jpg');
+  height: 50vh;
+}
+
+/* Foot Css */
+.foot-container{
+  width: 100vw;
+  height: 30vh;
+  background-image: linear-gradient(to right,rgba(32, 134, 202, 0.733),rgba(29, 218, 114, 0.658));
+}
+
+/* css-bodyMulitiple */
+.child-left{
+    width: 30vw;
+    height: 70vh;
+    border: #282c34 solid 2px;
+}
+.child-right{
+    width: 70vw;
+    height: 70vh;
+    border: #282c34 solid 2px;
+    margin-left: 2px;
+}
+.container-multiple{
+  display: flex;
+  flex-direction: row;
+}
+
+/* css-ContainerImgInf */
+.container-container{
+  width: 80vw;
+  height: 60vh;
+  margin: 1% 10% 2% 10%;
+  border: red solid 2px;
+}
+
+/*my app*/
+.container-login{
+  margin: 10%;
+  height: 329px;
+  position: absolute;
+  width: 236px;
+  border-radius: 10px;
+  background-image: linear-gradient(to right,rgba(85, 243, 196, 0.404),rgba(119, 202, 52, 0.644));
+}
+.col>.form-control{
+  height: 33px;
+  border-radius: 10px;
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.918);
+}
+.col{
+  width: 100%;
+  border-radius: 4%;
+}
+.btn{
+  margin-top: 15px;
+  background-color: rgba(255, 255, 255, 0.920);
+  border-radius: 7px;
+}
+.navigateur{
+  height: 70vh;
+  border: #282c34 solid 2px;
+  background-image: url('./img/anicet1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.navigateur::after{
+  content: "";
+  display: block;
+  height: 70vh;
+  width: 100vw;
+  background-color: #00000059;
+  position: absolute;
+  top: 0px;
+}
+.Logo{
+  font-family: 'Dancing';
+  font-size: large;
+  background-color: #5e89dd59;
+}
+.text{
+  float: right;
+  color: rgb(87, 20, 20);
+}
+.description{
+  background-color: #00000059;
+  color: white;
+  text-align: center;
+  margin: auto;
+  margin-top: 110px;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 10px;
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
